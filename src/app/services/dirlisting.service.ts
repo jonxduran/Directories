@@ -10,15 +10,15 @@ export class DirlistingService {
 	}
 
 	getDirListing() {
-		return this.http.get("./../../assets/dir_listing.json").map(res => res.json());
+		return this.http.get("./../../Directories/assets/dir_listing.json").map(res => res.json());
 	}
 
 	getFiles() {
-		return this.http.get("./../../assets/file.json").map(res => res.json());
+		return this.http.get("./../../Directories/assets/file.json").map(res => res.json());
 	}
 
 	getAllFiles() {
-		return this.http.get("./../../assets/allfiles.json").map(res => res.json());
+		return this.http.get("./../../Directories/assets/allfiles.json").map(res => res.json());
 	}
 
 }

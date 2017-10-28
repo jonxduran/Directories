@@ -2,6 +2,7 @@
   "name": "directories-app",
   "version": "0.0.0",
   "license": "MIT",
+  "homepage": "https://jonxduran.github.io/Directories",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

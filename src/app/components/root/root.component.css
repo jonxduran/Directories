@@ -1,0 +1,102 @@
+
+#headerbar {
+	background-color: slategrey;
+}
+
+	#home-container {
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		background-color: rgba(178, 235, 255, 0.4);
+	}
+
+	#home-a-container {
+		margin: 21px auto 0;
+	}
+	
+		#homeicon {
+			background: white;
+			display: inline-block;
+			height: 10px;
+			margin-top: 5px;
+			margin-left: 1px;
+			position: relative;
+			width: 20px;
+		}
+		#homeicon:before {
+			border-bottom: 12px solid white;
+			border-left: 10px solid transparent;
+			border-right: 10px solid transparent;
+			content: "";
+			height: 0;
+			left: 0;
+			position: absolute;
+			top: -12px;
+			width: 0;
+		}
+
+		#title-container {
+			flex-grow: 1;
+			height: 50px;
+			font-size: 24px;
+			color: white;
+		}
+
+
+#app-left {
+	width: 180px;
+}
+
+.router-directories {
+	width: 90%;
+	margin: 20px auto;
+	padding: 10px;
+	flex-direction: column;
+}
+
+	.dirdiv-a {
+		font-size: 18px;
+	}
+
+
+	.dirdiv-files {
+		width: 90%;
+	}
+		.dirdiv-file-container {
+			margin: 5px auto;
+			padding: 5px;
+			cursor: pointer;
+		}
+		.dirdiv-file-container.open {
+			background-color: rgba(138, 171, 188, 0.7);
+		}
+		.dirdiv-file-container:hover {
+			background-color: rgba(112, 128, 144, 0.45);
+		}
+
+
+
+#app-right {
+	width: calc(100% - 180px);
+}
+
+#displayfile {
+	margin: auto;
+	flex-direction: column;
+	background-color: rgba(255, 255, 255, 0.8);
+	width: 90%;
+	height: 90%;
+}
+
+	#displayfile-title {
+		padding: 10px;
+		width: 100%;
+		text-align: center;
+	}
+
+	#displayfile-content {
+		padding: 10px 20px;
+		width: calc(100% - 40px);
+		overflow-y: scroll;
+		height: 390px;
+	}

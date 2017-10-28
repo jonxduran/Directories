@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+.displayflex {
+	display: flex;
+}
+.marginauto {
+	margin: auto;
+}
+
+
+#directoriesapp {
+	width: 100%;
+	max-width: 640px;
+	min-height: 500px;
+	margin: auto;
+	background-color: #e7e7e7;
+}
+
+app-dirroot {
+	width: 100%;
+}

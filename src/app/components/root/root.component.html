@@ -1,0 +1,39 @@
+
+<div id="headerbar" class="displayflex">
+	<div id="home-container" class="displayflex">
+		<div id="home-a-container"><a routerLink="/">
+			<span id="homeicon"></span>
+		</a></div>
+	</div>
+	<div id="title-container" class="displayflex">
+		<div class="marginauto">Directories App</div>
+	</div>
+</div>
+
+<div id="app-body" class="displayflex">
+
+		<div id="app-left">
+
+			<div *ngFor="let dirdn of directories" class="router-directories displayflex" id='router-{{dirdn.dirName}}'>
+				
+				<a routerLink='/{{dirdn.dirName}}' class="dirdiv-a" > {{dirdn.displayName}} </a> <!-- (click)='openFile(dirdn.dirName)' -->
+				
+				<ng-container *ngFor="let fil of allfiles">
+					<div *ngIf="fil.opened == true && fil.dirName == dirdn.dirName" class="dirdiv-files marginauto" id='router-{{dirdn.dirName}}-files'>
+						<div *ngFor="let file of fil.files" (click)='openFile(dirdn.dirName, file.id)' class="dirdiv-file-container" id='{{dirdn.dirName}}-file-{{file.id}}'> 
+							<div class="files-title"> {{ file.fileName }} </div>
+						</div>
+					</div>
+				</ng-container>
+
+			</div>
+		</div>
+
+		<div id="app-right" class="displayflex">
+			<div *ngIf="(currfile | json) != '{}'" id="displayfile" class="displayflex">
+				<div id="displayfile-title"> {{currfile.fileName}} </div>
+				<div id="displayfile-content"> {{currfile.content}} </div>
+			</div>
+		</div>
+
+</div>
